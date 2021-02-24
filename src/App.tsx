@@ -10,6 +10,10 @@ export type DeviceDataType = {
   floor: number;
   roomOwner: string;
   room: string;
+  DeviceType: string;
+  battery: number;
+  signalStrength: number;
+  buttonLabel: string | { sensor: string; value: string }[];
 };
 
 function App() {
@@ -20,6 +24,15 @@ function App() {
       floor: 2,
       roomOwner: 'Asfand Yar',
       room: 'Bedroom',
+      DeviceType: 'Sensor',
+      battery: 20,
+      signalStrength: 80,
+      buttonLabel: [
+        {
+          sensor: 'Sensor',
+          value: 'YYYY',
+        },
+      ],
     },
     {
       id: 2,
@@ -27,13 +40,61 @@ function App() {
       floor: 1,
       roomOwner: 'Asfand Yar',
       room: 'TV Lounge',
+      DeviceType: 'Toggle',
+      battery: 50,
+      signalStrength: 60,
+      buttonLabel: 'Turn On',
     },
     {
       id: 3,
-      title: 'LED Light',
+      title: 'Temp & Humidity',
       floor: 2,
       roomOwner: 'Asfand Yar',
-      room: 'TV Lounge',
+      room: 'Garage',
+      DeviceType: 'Sensor',
+      battery: 90,
+      signalStrength: 30,
+      buttonLabel: [
+        {
+          sensor: 'Humidity',
+          value: '20%',
+        },
+        {
+          sensor: 'Temp',
+          value: '32\u00b0',
+        },
+      ],
+    },
+    {
+      id: 4,
+      title: 'LED Light',
+      floor: 1,
+      roomOwner: 'Asfand Yar',
+      room: 'Basement',
+      DeviceType: 'Toggle',
+      battery: 50,
+      signalStrength: 60,
+      buttonLabel: 'Turn On',
+    },
+    {
+      id: 5,
+      title: 'Temp & Humidity',
+      floor: 2,
+      roomOwner: 'Asfand Yar',
+      room: 'Living Room',
+      DeviceType: 'Sensor',
+      battery: 30,
+      signalStrength: 80,
+      buttonLabel: [
+        {
+          sensor: 'Humidity',
+          value: '20%',
+        },
+        {
+          sensor: 'Temp',
+          value: '32\u00b0',
+        },
+      ],
     },
   ];
 
