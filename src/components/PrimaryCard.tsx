@@ -9,7 +9,6 @@ import {
   FaExclamationCircle,
 } from 'react-icons/fa';
 import TurnOnButton from './TurnOnButton';
-import SensorButton from './SensorButton';
 import ButtonGrid from './ButtonGrid';
 
 type Props = {
@@ -18,8 +17,8 @@ type Props = {
 
 const PrimaryCard: React.FC<Props> = ({ item }) => {
   return (
-    <div className='w-full lg:w-6/12 xl:w-4/12 px-4 mb-4'>
-      <div className='flex flex-col min-w-0 break-words bg-white rounded-lg mb-6 xl:mb-0 shadow-lg h-full'>
+    <div className='mb-4'>
+      <div className='flex flex-col min-w-0 break-words bg-white rounded-2xl mb-6 xl:mb-0 shadow-lg h-full'>
         <div className='flex-auto p-4 flex flex-col justify-between h-full'>
           <div className='flex flex-wrap'>
             {/* Left Col */}
@@ -44,7 +43,7 @@ const PrimaryCard: React.FC<Props> = ({ item }) => {
               )}
             </div>
           </div>
-          <div className='flex flex-wrap self-stretch'>
+          <div className='flex flex-wrap'>
             <div className='relative w-full pr-4 max-w-full flex-grow flex-1 flex flex-col justify-end'>
               <h2 className='text-black font-bold text-4xl'>{`F${item.floor}`}</h2>
               <span className='uppercase text-xs text-gray-800'>

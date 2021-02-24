@@ -9,7 +9,8 @@ type Props = {
 const PrimaryCardGrid: React.FC<Props> = ({ data }) => {
   return (
     <>
-      <div className='flex flex-wrap items-stretch'>
+      {/* flex flex-wrap items-stretch */}
+      <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 auto-rows-fr gap-10'>
         {data.map((item) => (
           <PrimaryCard key={item.id} item={item} />
         ))}

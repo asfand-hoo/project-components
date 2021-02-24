@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 import './App.css';
 import PrimaryCardGrid from './components/PrimaryCardGrid';
+import SecondaryCard from './components/SecondaryCard';
 
 // Types
 export type DeviceDataType = {
@@ -76,26 +77,6 @@ function App() {
       signalStrength: 60,
       buttonLabel: 'Turn On',
     },
-    {
-      id: 5,
-      title: 'Temp & Humidity',
-      floor: 2,
-      roomOwner: 'Asfand Yar',
-      room: 'Living Room',
-      DeviceType: 'Sensor',
-      battery: 30,
-      signalStrength: 80,
-      buttonLabel: [
-        {
-          sensor: 'Humidity',
-          value: '20%',
-        },
-        {
-          sensor: 'Temp',
-          value: '32\u00b0',
-        },
-      ],
-    },
   ];
 
   const [data, setData] = useState([] as DeviceDataType[]);
@@ -110,6 +91,13 @@ function App() {
       </h2>
       <div className='w-4/5 m-auto'>
         <PrimaryCardGrid data={data} />
+      </div>
+      <div className='mt-10'></div>
+      <div className='w-4/5 m-auto'>
+        <h2 className='text-4xl text-blue-200 font-bold tracking-wide text-center py-4'>
+          Secondary Card
+          <SecondaryCard />
+        </h2>
       </div>
     </div>
   );
